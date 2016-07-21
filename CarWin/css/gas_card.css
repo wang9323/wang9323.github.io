@@ -1,0 +1,520 @@
+/*
+ * 加油卡--服务说明
+ * 2016-07-07
+ * by wangshaohui
+ * 更改于2016-07-08上午
+ * */
+*{
+	padding: 0;
+	margin: 0;
+	font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+	font-size: 14px;
+}
+body{
+	background: #f7f9f9;
+}
+div{
+	box-sizing: border-box;
+}
+/*所有蓝色的字体*/
+.gas_color{
+	color: #0aaab8;
+}
+.bg_color{
+	background: #ffffff;
+}
+/*所有btn的背景色*/
+.bg_btn{
+	background: #0AAAB8;
+	margin: 20px 15px;
+	font-size: 16px;
+}
+.bgred_btn{
+	background: #EB736B;
+	margin: 20px 15px;
+	font-size: 16px;
+}
+/*a的颜色#999999*/
+.col{
+	color: #999999;
+}
+/*所有输入框，鼠标显示状态*/
+input{
+	cursor: pointer;
+}
+/*充值服务*/
+.gas_service{
+  	font-size: 18px;
+  	padding-top: 20px;
+  	text-align: center;
+  	color: #333333;
+}
+.weui_article p{
+	margin: 0;
+	color: #333333;
+}
+
+/*加油卡充值*/
+.tab_one{
+	width: 45%;
+	padding: 10px 0;
+	margin: 0 auto;
+}
+.tab_active{
+	border-bottom: solid 3px #0AAAB8;
+}
+.tab_one>img{
+	width: 20px;
+  	height: 20px;
+  	vertical-align: middle;
+}
+.tab_one>div{
+	display: inline;
+	color: #333333;
+}
+/*更改tab——weui样式*/
+.weui_navbar{
+	background: #ffffff;
+}
+.weui_tab_bd>.weui_cell{
+	background: #ffffff;
+  	margin-top: 10px;
+}
+.weui_navbar_item{
+	padding: 0;
+	background: transparent;
+}
+.weui_panel_hd:after{
+	display: none;
+}
+.weui-row .weui-col-25{
+	text-align: center;
+	box-shadow: inset 1px 0px 0px 0px #e5e5e5;
+	background: #ffffff;
+}
+/*变化之后的颜色*/
+.weui-row > a.active{ color:#fff !important; background:#0AAAB8;}
+.weui-row > a.active >p:first-child{ font-size:18px; color:#fff; padding:10px 0px 4px 0px;}
+.weui-row > a.active >p:last-child{ color:#fff; padding-bottom:10px;}
+.weui-row > a.active >p:first-child > span{font-size:18px; color:#fff;}
+/*变化之前的颜色*/
+.weui-row > a >p:first-child{ font-size:18px; color:#333333; padding:10px 0px 4px 0px;}
+.weui-row > a >p:last-child{ color:#0AAAB8; padding-bottom:10px;}
+.weui-row > a >p:first-child > span{font-size:18px; color:#333333;}
+.weui-row > a:last-child{ border-right:none;}
+
+/*中石化的内容样式*/
+.gas_input{
+	padding: 10px 0 10px 15px;
+	border: solid 1px #E5E5E5;
+}
+.gas_input input{
+	margin-left: 20px;
+	color: inherit;
+}
+.introduce{
+	padding: 0 15px;
+	font-size: 12px;
+}
+.introduce>span{
+	color: #0AAAB8;
+	font-size: 12px;
+	margin-bottom: 2px;
+}
+.introduce>ul{
+	margin-top: 5px;
+	margin-left: -10px;
+}
+.introduce>ul li{
+	list-style: none;
+	font-size: 12px;
+	color: #999999;
+	line-height: 1.7;
+	/*解决换行后的缩进*/
+	text-indent: -20px;
+	margin-left: 30px;
+}
+.gas_margin{
+	text-align: center;
+}
+.gas_margin span{
+	font-size: 12px;
+	position: relative;
+	top: -2px;
+}
+.check_input{
+	margin-top: 25%;
+}
+.sign{
+	font-size: 12px;
+}
+/*复选框的美化*/
+.check-box {
+  	height: 14px;
+  	width: 14px;
+  	background-color: #fff;
+  	border: 2px solid #666666;
+  	border-radius: 2px;
+  	position: relative;
+  	display: inline-block;
+  	-moz-box-sizing: border-box;
+  	-webkit-box-sizing: border-box;
+  	box-sizing: border-box;
+  	cursor: pointer;
+}
+.check-box::before, .check-box::after {
+  	-moz-box-sizing: border-box;
+  	-webkit-box-sizing: border-box;
+  	box-sizing: border-box;
+  	position: absolute;
+  	height: 0;
+  	width: 2px;
+  	background-color:#fff;
+  	display: inline-block;
+  	-moz-transform-origin: left top;
+  	-ms-transform-origin: left top;
+  	-o-transform-origin: left top;
+  	-webkit-transform-origin: left top;
+  	transform-origin: left top;
+  	border-radius: 5px;
+  	content: ' ';
+}
+.check-box::before {
+  	top: 9px;
+  	left: 4px;
+  	-moz-transform: rotate(-135deg);
+  	-ms-transform: rotate(-135deg);
+  	-o-transform: rotate(-135deg);
+  	-webkit-transform: rotate(-135deg);
+  	transform: rotate(-135deg);
+}
+.check-box::after {
+  	top: 5px;
+  	left: -1px;
+  	-moz-transform: rotate(-45deg);
+  	-ms-transform: rotate(-45deg);
+  	-o-transform: rotate(-45deg);
+  	-webkit-transform: rotate(-45deg);
+  	transform: rotate(-45deg);
+}
+input[type=checkbox]:checked + .check-box,
+.check-box.checked {
+  	border-color: #666666;
+  	background:#666666;
+}
+input[type=checkbox]:checked + .check-box::after,
+.check-box.checked::after {
+  	height: 6px;
+}
+input[type=checkbox]:checked + .check-box::before,
+.check-box.checked::before {
+  	height: 10px;
+}
+#petrochina_div{
+	display: none;
+}
+#cbtest,#cbtests,#cbtest3{
+	-webkit-appearance: textfield;
+    margin: 0; 
+    position: absolute;
+    appearance: textfield;
+    -moz-appearance: textfield;
+    width: 14px;
+    height: 14px;
+  	border: 0px; 
+    background: rgba(0, 0, 0, 0);
+    z-index: 200;
+}
+/*
+ * 加油卡列表记录
+ * 2016-07-11上午
+ * by wangshaohui
+ * */
+.gas_list_head{
+	float: right;
+  	height: 50px;
+  	padding: 20px 20px 0 0;
+}
+.gas_list_head>.gas_num{
+	position: relative;
+	top:-7px;
+	right: -3px;
+	display: inline-block;
+	padding: 0 4px;
+	background: #eb736b;
+	border-radius: 10px;
+	line-height: 1.2;
+	text-align: center;
+}
+.gas_list_head>.gas_num>span{
+	position: relative;
+	color: #fff;
+	font-size: 12px;
+}
+/*清除浮动*/
+.clearfix:before,.clearfix:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.clearfix{
+	zoom: 1;
+}
+.gas_lists{
+	margin-top: -15px;
+}
+.gas_lists+section{
+	margin-top: -10px;
+}
+a:hover {
+	opacity:0.8;
+	filter:alpha(opacity=80);
+	text-decoration:none;
+}
+a:active {
+	opacity:0.5;
+	filter:alpha(opacity=50);
+}
+.weui_cells:before{
+	border-top: none;
+}
+.weui_color{
+	color: #999999;
+}	
+.bg_charge{
+	width: 100%;
+	background: #FFFFFF;
+	padding: 10px 15px;
+}
+.gas_small_btn{
+	float: right;
+  	padding: 2.5px 10px;
+  	font-size: 12px;
+  	color: #f3ae36;
+  	border: 1px solid #f3ae36;
+}
+.border_rad3{
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+/*小图标的样式*/
+.icon{
+	width:20px;
+	margin-right:5px;
+}
+/*更改弹出框的样式*/
+.weui_dialog_ft a,.weui_btn_dialog.primary{
+	color: #0AAAB8;
+}
+.weui_dialog_hd{
+	padding: 7px 18px;
+	text-align: left;
+	border-bottom: solid 1px #E5E5E5;
+}
+.weui_dialog_title{
+	font-size: 14px;
+}
+.weui_dialog_ft{
+	margin-top: 10px;
+}
+.dialog_ul{
+	list-style: none;
+	text-align: left;
+	padding-top: 8px;
+}
+.dialog_ul li{
+	font-size: 12px;
+	padding: 4px 0;
+}
+.dialog_ul li span{
+	float: right;
+	font-size: 12px;
+}
+.span_red{
+	color: #EB736B;
+}
+.span_gray{
+	color: #333333;
+}
+/*加油卡二次充值*/
+.cell_top{
+	margin-top: 0;
+}
+.again_left{
+	float: left;
+}
+/*加油卡编辑*/
+.padding_15{
+	padding: 0 15px;
+}
+.edit_pad{
+	padding: 10px 0 10px 15px;
+	border-bottom: solid 1px #E5E5E5;
+	border-top: solid 1px #E5E5E5;
+}
+.edit_pad input{
+	margin-left: 15px;
+}
+.position{
+	position: relative;
+    top: 0;
+    left: -30px;
+}
+.weui_select{
+	width: auto;
+}
+.weui_cell:before{
+	border-top: none;
+}
+/*select 选择输入框*/
+#petrochina_input{
+	display: none;
+}
+.sel_posi{
+	position: relative;
+}
+.hide{
+	display: none;
+	padding: 0;
+}
+.text_cet{
+	width: 68px;
+	text-align:justify;
+	text-align: center;
+	display: inline;
+    text-justify:distribute-all-lines;/*ie6-8*/
+    text-align-last:justify;/* ie9*/
+    -moz-text-align-last:justify;/*ff*/
+    -webkit-text-align-last:justify;/*chrome 20+*/	
+    word-spacing:-1em;/*调整文本，以防止使用两端对齐之后字间距过大*/ 
+}
+/*充值记录
+ 2016-07-12*/
+.records_top{
+	margin-top: 20px;
+	padding: 10px 15px;
+	color: #333333;
+	background: #ffffff;
+	margin-bottom: 1.5em;
+}
+.border_bot{
+	border-bottom: solid 1px #E5E5E5;
+}
+.btn_right{
+	float: right;
+}
+.peil_record{
+	padding: 7px 15px;
+}
+/*button的色值*/
+.btn_pad{
+	padding: 2px 15px;
+}
+.btn_green{
+	color: #0AAAB8;
+	border-color: #0AAAB8;
+}
+/*解决“付款”的点击事件*/
+.btn_click{
+    position: relative;
+    top: -28px;
+    right: 15px;
+    padding: 0px 15px;
+    margin-bottom: -1.0em;
+}
+.click_wid{
+	height: 35px;
+}
+.btn_gary{
+	color: #999999;
+	border-color: #999999;
+}
+.btn_orange{
+	color: #f5a623;
+	border-color: #f5a623;
+}
+.btn_red{
+	color: #eb736b;
+	border-color: #eb736b;
+}
+.records_status{
+	margin-bottom: 1.0em;
+}
+.records_list{
+	width: 100%;
+	list-style: none;
+}
+.records_list li{
+	padding: 2px 0;
+}
+.records_list li,.records_list span{
+	font-size: 12px;
+	color: #999999;
+}
+.records_list li span{
+	float: right;
+}
+.info_show,.back{
+	display: none;
+}
+/*油价*/
+#gas_price{
+	background: #FFFFFF;
+	padding-top: 20px;
+}
+.city{
+	width: 65px;
+	background: #0AAAB8;
+	color: #FFFFFF;
+	text-align: right;
+	padding: 2px 10px 2px 0;
+	border-radius: 0 5px 5px 0;
+}
+.prices{
+	margin-top: 20px;
+	position: relative;
+	width: 100%;
+}
+.prices>a{
+	position: relative;
+}
+.prices>a p:first-child{
+	color: #999999;
+}
+.prices>a>p>span,.prices>a>p:last-child{
+	font-size: 20px;
+}
+.active:before{
+	content: '';
+	width: 0;
+	height: 0;
+	border: solid 10px #0AAAB8;
+	position: absolute;
+	top: -19px;
+	left: 40%;
+	border-top-color:transparent ;
+	border-left-color:transparent ;
+	border-right-color:transparent ;
+}
+.price_maintain{
+	text-align: center;
+	margin-top: 40px;
+}
+.price_maintain>span{
+	font-size: 30px;
+}
+.weui_btn.weui_btn_mini{
+	line-height: 1.7;
+    position: relative;
+    top: 5px;
+    font-size: 12px;
+}
+.price_date{
+	font-size: 12px;
+	text-align: center;
+	padding: 5px 0;
+}
+#main{
+	height: 300px;
+}

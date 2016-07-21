@@ -1,0 +1,231 @@
+<!--
+ * 充值记录
+ * 2016-07-12下午
+ * by wangshaohui
+ * -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>充值记录</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<link rel="stylesheet" href="css/weui.min.css"/>
+	    <link rel="stylesheet" href="css/jquery-weui.min.css"/>
+	    <link rel="stylesheet" href="http://apps.bdimg.com/libs/fontawesome/4.4.0/css/font-awesome.min.css"/>
+	    <link rel="stylesheet" href="css/gas_card.css"/>
+	    <link rel="stylesheet" href="css/style.css"/>
+	    <meta name="description" content="青岛车赢广告有限公司，专注于互联网形式的广告开发、广告投放及广告运营，致力于通过广告到消费转化率的精准统计，帮助商户找到目标客户群，于2014年在青岛投资创立。">
+		<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="js/jquery-weui.min.js"></script>
+		<script src="js/gas_card.js"></script>
+	</head>
+	<body>
+		<!-- body 顶部加上如下代码 -->
+  	<div class="weui-pull-to-refresh-layer">
+    	<div class="pull-to-refresh-arrow"></div> <!-- 上下拉动的时候显示的箭头 -->
+    	<div class="pull-to-refresh-preloader"></div> <!-- 正在刷新的菊花 -->
+    	<div class="down">下拉刷新</div><!-- 下拉过程显示的文案 -->
+    	<div class="up">释放刷新</div><!-- 下拉超过50px显示的文案 -->
+    	<div class="refresh">正在刷新...</div><!-- 正在刷新时显示的文案 -->
+  	</div>
+  	<div class="weui_panel_hd records_top">充值总计：&nbsp;<span>￥3000</span></div>
+<!--  	</div>-->
+  	<div id="loading">
+  		<!--待付款-->
+  		<div class="weui_cells">
+  			<div class="weui_cell border_bot">
+    			<div class="weui_cell_bd weui_cell_primary gas_color">
+     			 	<i class="fa fa-exclamation-circle"></i>&nbsp;待付款
+    			</div>
+    			<div class="weui_cell_ft sign">
+      			2015-09-12 17:29
+    			</div>
+  			</div>
+  			<div class="weui_cell border_bot">
+    			<div class="weui_cell_bd weui_cell_primary col">
+     			 	<p>中石化加油卡充值</p>
+    			</div>
+    			<div class="weui_cell_ft gas_color">
+      			￥184
+    			</div>
+  			</div>
+  			<div class="info_show">
+  				<div class="weui_cell border_bot">
+    				<ul class="records_list">
+    					<li>订单号<span>812783612391287387172387</span></li>
+    					<li>加油卡号<span>1234567890123456</span></li>
+    				</ul>
+  				</div>
+  			</div>
+			<div class="weui_cell btn_right peil_record click_wid">
+      			<a href="javascript:;" class="gas_small_btn border_rad3 btn_gary btn_pad back">收起</a>
+  		</div>
+		</div>
+		<a href="javascript:;" class="gas_small_btn border_rad3 btn_green btn_pad pay_money btn_click">付款</a>
+		<!--充值成功-->
+		<div class="weui_cells">
+  			<div class="weui_cell border_bot">
+    			<div class="weui_cell_bd weui_cell_primary col">
+     			 	<i class="fa fa-check-circle"></i>&nbsp;充值成功
+    			</div>
+    			<div class="weui_cell_ft sign">
+      			2015-09-12 17:29
+    			</div>
+  			</div>
+  			<div class="weui_cell border_bot">
+    			<div class="weui_cell_bd weui_cell_primary col">
+     			 	<p>中石化加油卡充值</p>
+    			</div>
+    			<div class="weui_cell_ft gas_color">
+      			￥184
+    			</div>
+  			</div>
+  			<div class="info_show">
+  				<div class="weui_cell border_bot ">
+    				<ul class="records_list">
+    					<li>订单号<span>812783612391287387172387</span></li>
+    					<li>加油卡号<span>1234567890123456</span></li>
+    				</ul>
+  				</div>
+  			</div>
+  			<div class="weui_cell btn_right peil_record">
+      			<a href="javascript:;" class="gas_small_btn border_rad3 btn_gary btn_pad pay_money">详情</a>
+      			<a href="javascript:;" class="gas_small_btn border_rad3 btn_gary btn_pad back">收起</a>
+  			</div>
+		</div>
+		<!--充值中-->
+		<div class="weui_cells">
+  			<div class="weui_cell border_bot">
+    			<div class="weui_cell_bd weui_cell_primary btn_orange">
+     			 	<i class="fa fa-clock-o"></i>&nbsp;充值中
+    			</div>
+    			<div class="weui_cell_ft sign">
+      			2015-09-12 17:29
+    			</div>
+  			</div>
+  			<div class="weui_cell border_bot">
+    			<div class="weui_cell_bd weui_cell_primary col">
+     			 	<p>中石化加油卡充值</p>
+    			</div>
+    			<div class="weui_cell_ft btn_orange">
+      			￥184
+    			</div>
+  			</div>
+  			<div class="info_show">
+  				<div class="weui_cell border_bot ">
+    				<ul class="records_list">
+    					<li>订单号<span>812783612391287387172387</span></li>
+    					<li>加油卡号<span>1234567890123456</span></li>
+    				</ul>
+  				</div>
+  			</div>
+  			<div class="weui_cell btn_right peil_record">
+      			<a href="javascript:;" class="gas_small_btn border_rad3 btn_orange btn_pad pay_money">详情</a>
+      			<a href="javascript:;" class="gas_small_btn border_rad3 btn_gary btn_pad back">收起</a>
+  			</div>
+		</div>
+		<!--充值失败，退款中-->
+		<div class="weui_cells">
+  			<div class="weui_cell border_bot">
+    			<div class="weui_cell_bd weui_cell_primary btn_red">
+     			 	<i class="fa fa-times-circle-o"></i>&nbsp;充值失败，退款中
+    			</div>
+    			<div class="weui_cell_ft sign">
+      			2015-09-12 17:29
+    			</div>
+  			</div>
+  			<div class="weui_cell border_bot">
+    			<div class="weui_cell_bd weui_cell_primary col">
+     			 	<p>中石化加油卡充值</p>
+    			</div>
+    			<div class="weui_cell_ft btn_red">
+      			￥184
+    			</div>
+  			</div>
+  			<div class="info_show">
+  				<div class="weui_cell border_bot ">
+    				<ul class="records_list">
+    					<li>订单号<span>812783612391287387172387</span></li>
+    					<li>加油卡号<span>1234567890123456</span></li>
+    				</ul>
+  				</div>
+  			</div>
+  			<div class="weui_cell btn_right peil_record">
+      			<a href="javascript:;" class="gas_small_btn border_rad3 btn_red btn_pad pay_money">详情</a>
+      			<a href="javascript:;" class="gas_small_btn border_rad3 btn_gary btn_pad back">收起</a>
+  			</div>
+		</div>
+		<!--退款成功-->
+		<div class="weui_cells">
+  			<div class="weui_cell border_bot">
+    			<div class="weui_cell_bd weui_cell_primary btn_gary">
+     			 	<i class="fa fa-check-circle"></i>&nbsp;退款成功
+    			</div>
+    			<div class="weui_cell_ft sign">
+      			2015-09-12 17:29
+    			</div>
+  			</div>
+  			<div class="weui_cell border_bot">
+    			<div class="weui_cell_bd weui_cell_primary col">
+     			 	<p>中石化加油卡充值</p>
+    			</div>
+    			<div class="weui_cell_ft btn_gary">
+      			￥184
+    			</div>
+  			</div>
+  			<div class="info_show">
+  				<div class="weui_cell border_bot ">
+    				<ul class="records_list">
+    					<li>订单号<span>812783612391287387172387</span></li>
+    					<li>加油卡号<span>1234567890123456</span></li>
+    				</ul>
+  				</div>
+  			</div>
+  			<div class="weui_cell btn_right peil_record">
+      			<a href="javascript:;" class="gas_small_btn border_rad3 btn_gary btn_pad pay_money">详情</a>
+      			<a href="javascript:;" class="gas_small_btn border_rad3 btn_gary btn_pad back">收起</a>
+  			</div>
+		</div>
+		<!--已关闭-->
+		<div class="weui_cells">
+  			<div class="weui_cell border_bot">
+    			<div class="weui_cell_bd weui_cell_primary btn_gary">
+     			 	<i class="fa fa-check-circle"></i>&nbsp;已关闭
+    			</div>
+    			<div class="weui_cell_ft sign">
+      			2015-09-12 17:29
+    			</div>
+  			</div>
+  			<div class="weui_cell border_bot">
+    			<div class="weui_cell_bd weui_cell_primary col">
+     			 	<p>中石化加油卡充值</p>
+    			</div>
+    			<div class="weui_cell_ft btn_gary">
+      			￥184
+    			</div>
+  			</div>
+  			<div class="info_show">
+  				<div class="weui_cell border_bot ">
+    				<ul class="records_list">
+    					<li>订单号<span>812783612391287387172387</span></li>
+    					<li>加油卡号<span>1234567890123456</span></li>
+    				</ul>
+  				</div>
+  			</div>
+  			<div class="weui_cell btn_right peil_record">
+      			<a href="javascript:;" class="gas_small_btn border_rad3 btn_gary btn_pad pay_money">详情</a>
+      			<a href="javascript:;" class="gas_small_btn border_rad3 btn_gary btn_pad back">收起</a>
+  			</div>
+		</div>
+	</div>
+	<div class="weui-infinite-scroll">
+  		<div class="infinite-preloader"></div>
+  			正在加载... <!-- 文案，可以自行修改 -->
+	</div>
+	</body>
+	<script type="text/javascript">
+		/*下拉刷新*/
+		$(document.body).pullToRefresh();
+	</script>
+</html>

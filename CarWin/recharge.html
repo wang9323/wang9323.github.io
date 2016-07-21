@@ -1,0 +1,151 @@
+<!--
+ * 加油卡充值
+ * 2016-07-06
+ * by wangshaohui
+ * 更新于2016-07-11上午
+ * -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>加油卡充值</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<link rel="stylesheet" href="css/weui.min.css"/>
+	    <link rel="stylesheet" href="css/jquery-weui.min.css"/>
+	    <link rel="stylesheet" href="http://apps.bdimg.com/libs/fontawesome/4.4.0/css/font-awesome.min.css"/>
+	    <link rel="stylesheet" href="css/gas_card.css"/>
+	    <meta name="description" content="青岛车赢广告有限公司，专注于互联网形式的广告开发、广告投放及广告运营，致力于通过广告到消费转化率的精准统计，帮助商户找到目标客户群，于2014年在青岛投资创立。">
+		<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="js/jquery-weui.min.js"></script>
+		<script src="js/gas_card.js"></script>
+	</head>
+	<body> 
+		<div class="weui_tab">
+  			<div class="weui_navbar">
+    			<a href="#tab1" class="weui_navbar_item weui_bar_item_on" id="sinopec">
+     				<div class="tab_one tab_active">
+  						<img src="img/icon_sinopec.png"/>
+						<div class="name">中石化</div>
+  					</div>
+    			</a>
+    			<a href="#tab2" class="weui_navbar_item" id="petrochina">
+      				<div class="tab_one">
+  						<img src="img/icon_petrochina.png"/>
+						<div class="name">中石油</div>
+  					</div>
+    			</a>
+  			</div>
+  			<div class="weui_tab_bd">
+  				<!--中石化页面-->
+    			<div id="tab1" class="weui_tab_bd_item weui_tab_bd_item_active">
+      				<div class="weui_cells">		
+			        	<div class="weui_cell weui_cell_select gas_input">
+			        		<div class="weui_cell_hd gas_color">加油卡卡号</div>
+			            	<div class="weui_cell_primary input_marg">
+			                	<input id="num_input1" class="weui_input" type="tel" maxlength="19" placeholder="请输入19位卡号">
+			            	</div>
+			        	</div>
+			    	</div>
+  					<div class="weui_panel_hd">充值金额</div>
+  					<div class="weui-row weui-no-gutter">
+  						<a class="weui-col-25">
+      						<p>¥<span>100</span></p>
+      						<p>9.2折</p>
+  						</a>
+  						<a class="weui-col-25">
+      						<p>¥<span>200</span></p>
+      						<p>9.2折</p>
+  						</a>
+  						<a class="weui-col-25">
+      						<p>¥<span>500</span></p>
+      						<p>9.2折</p>
+  						</a>
+  						<a class="weui-col-25">
+      						<p>¥<span>1000</span></p>
+      						<p>9.2折</p>
+  						</a>
+					</div>
+					<div class="weui-row">
+  						<div class="weui_panel_hd">充值说明</div>
+  						<div class="weui_panel_hd">
+  							<a href="javascript:;" class="col">服务说明
+  								<i class="fa  fa-question-circle"></i>
+  							</a>
+  						</div>
+					</div>
+					<div class="introduce">
+						<span><i class="fa fa-shield"></i> 官方直充，充值成功后，立即到账</span>
+						<ul>
+							<li>1、充值成功后，请先到加油站圈存即可加油</li>
+							<li>2、圈存操作：加油前，请将油卡交给工作人员圈存即可</li>
+							<li>3、每天22:50至次日凌晨00:50为系统结算时间，此时间段暂停充值，望请谅解</li>
+						</ul>
+					</div>
+					<div class="weui_panel weui_panel_access check_input">
+  						<div class="weui_panel_hd gas_margin">
+  							<input type="checkbox" id="cbtest" checked="checked"/>
+            				<label for="cbtest" class="check-box"></label> 
+            				<span><a class="sign">我已阅读并同意《用户充值协议》</a></span>
+  						</div>
+  				</div>
+  					<a href="javascript:;" class="weui_btn bg_btn" id="gas_btn1">充值</a>
+    			</div>
+    			<!--中石油页面-->
+    			<div id="tab2" class="weui_tab_bd_item">
+      				<div class="weui_cells">		
+			        	<div class="weui_cell weui_cell_select gas_input">
+			        		<div class="weui_cell_hd gas_color">加油卡卡号</div>
+			            	<div class="weui_cell_primary input_marg">
+			               		<input id="num_input2" class="weui_input" type="tel" maxlength="16" placeholder="请输入16位卡号">
+			            	</div>
+			        	</div>
+			    	</div>
+  					<div class="weui_panel_hd">充值金额</div>
+  					<div class="weui-row weui-no-gutter">
+  						<a class="weui-col-25">
+      						<p>¥<span>100</span></p>
+      						<p>9.2折</p>
+  						</a>
+  						<a class="weui-col-25">
+      						<p>¥<span>200</span></p>
+      						<p>9.2折</p>
+  						</a>
+  						<a class="weui-col-25">
+      						<p>¥<span>500</span></p>
+      						<p>9.2折</p>
+  						</a>
+  						<a class="weui-col-25">
+      						<p>¥<span>1000</span></p>
+      						<p>9.2折</p>
+  						</a>
+					</div>
+					<div class="weui-row">
+  						<div class="weui_panel_hd">充值说明</div>
+  						<div class="weui_panel_hd">
+  							<a href="javascript:;" class="col">服务说明
+  								<i class="fa  fa-question-circle"></i>
+  							</a>
+  						</div>
+					</div>
+					<div class="introduce">
+						<span><i class="fa fa-shield"></i> 官方直充，充值成功后，立即到账</span>
+						<ul>
+							<li>1、充值成功后，请先到加油站圈存即可加油</li>
+							<li>2、圈存操作：加油前，请将油卡交给工作人员圈存即可</li>
+							<li>3、每天22:50至次日凌晨00:50为系统结算时间，此时间段暂停充值，望请谅解</li>
+						</ul>
+					</div>
+					<div class="weui_panel weui_panel_access check_input">
+  						<div class="weui_panel_hd gas_margin">
+  							<input type="checkbox" id="cbtests"/>
+            				<label for="cbtests" class="check-box" checked="checked"></label> 
+            				<span><a class="sign">我已阅读并同意《用户充值协议》</a></span>
+  						</div>
+  					</div>
+  					<a href="javascript:;" class="weui_btn bg_btn" id="gas_btn2">充值</a>
+    			</div>
+  			</div>
+		</div>
+	</body>
+</html>

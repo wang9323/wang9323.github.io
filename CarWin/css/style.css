@@ -1,0 +1,16 @@
+/*dialog的冲突提示框样式更改*/
+.weui_dialog_hd{
+	display:none;
+}
+.weui_dialog_bd{
+	padding-top: 20px;
+	padding-bottom: 15px;
+}
+/*解决边框的问题*/
+.weui_cells:after{
+	border-bottom:none ;
+}
+.weui_cells{
+	margin-top: 0.5em;
+	width: 100%;
+}

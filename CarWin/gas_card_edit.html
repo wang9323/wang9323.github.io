@@ -1,0 +1,44 @@
+<!--
+ * 加油卡编辑
+ * 2016-07-12下午
+ * by wangshaohui
+ * -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>加油卡编辑</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<link rel="stylesheet" href="css/weui.min.css"/>
+	    <link rel="stylesheet" href="css/jquery-weui.min.css"/>
+	    <link rel="stylesheet" href="http://apps.bdimg.com/libs/fontawesome/4.4.0/css/font-awesome.min.css"/>
+	    <link rel="stylesheet" href="css/gas_card.css"/>
+	    <link rel="stylesheet" href="css/style.css"/>
+	    <meta name="description" content="青岛车赢广告有限公司，专注于互联网形式的广告开发、广告投放及广告运营，致力于通过广告到消费转化率的精准统计，帮助商户找到目标客户群，于2014年在青岛投资创立。">
+		<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="js/jquery-weui.min.js"></script>
+		<script src="js/gas_card.js"></script>
+	</head>
+	<body>
+		<div class="weui_cell weui_cell_select padding_15">
+			<div class="weui_cell_hd gas_color text_cet">油卡所属</div>
+    		<div class="weui_cell_primary sel_posi">
+      			<select class="weui_select" name="select1" id="select_kinds">
+        			<option selected="" value="0">中国石化加油卡</option>
+        			<option value="1">中国石油加油卡</option>
+      			</select>
+      			<i class="fa fa-chevron-down gas_color position"></i>
+   			</div>
+ 		</div>
+		<div class="weui_cell weui_cell_select edit_pad">
+			<div class="weui_cell_hd gas_color">加油卡卡号</div>
+			<div class="weui_cell_primary input_marg">
+			    <input id="sinopec_input" class="weui_input" type="tel" maxlength="19" placeholder="请输入19位卡号">
+			    <input id="petrochina_input" class="weui_input" type="tel" maxlength="16" placeholder="请输入16位卡号">
+			</div>
+		</div>
+		<a href="javascript:;" class="weui_btn bg_btn" id="save_edit">保存</a>
+		<a href="javascript:;" class="weui_btn bgred_btn" id="delete_edit">删除</a>
+	</body>
+</html>
